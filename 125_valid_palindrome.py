@@ -3,14 +3,14 @@ import re
 
 def MySolutionIsPalindrome(s: str) -> bool:
     cleaned_text = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
-    right_index = 0
-    left_index = len(cleaned_text) - 1
+    left_index = 0
+    right_index = len(cleaned_text) - 1
 
-    while left_index > right_index or left_index == right_index:
-        if cleaned_text[left_index] != cleaned_text[right_index]:
+    while right_index > left_index or right_index == left_index:
+        if cleaned_text[right_index] != cleaned_text[left_index]:
             return False
-        right_index += 1
-        left_index -= 1
+        left_index += 1
+        right_index -= 1
 
     return True
 
