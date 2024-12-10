@@ -36,7 +36,6 @@ def remove_duplicates_my_solution(nums: List[int]) -> int:
                 nums[r] = "_"
             r += 1
             l += 1
-    print(nums)
     return k
 
 # O(n)
@@ -46,6 +45,7 @@ def removeDuplicates(nums: List[int]) -> int:
     l_unique_elements = 1
     for r in range(1, len(nums)):
         if nums[r] != nums[r - 1]:
+            nums[l_unique_elements] = nums[r]
             l_unique_elements += 1
     return l_unique_elements
 
