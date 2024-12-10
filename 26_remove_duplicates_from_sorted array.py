@@ -39,6 +39,7 @@ def remove_duplicates_my_solution(nums: List[int]) -> int:
     print(nums)
     return k
 
+# O(n)
 def removeDuplicates(nums: List[int]) -> int:
     if not nums:
         return 0
